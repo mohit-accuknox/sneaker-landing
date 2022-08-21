@@ -1,14 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Navbar.css";
 
 const Navbar = () => {
+
+  const [isActive, setIsactive] = useState(false);
+
   return (
     <div>
         <nav className="nav_items">
           <div className="left">
-            <img src="/images/icon-menu.png" alt="menu-icon" className="menu" />
+            <img src="/images/icon-menu.png" alt="menu-icon" className="menu" onClick={() => {setIsactive(!isActive)}}/>
             <h1 className="logo_name">sneakers</h1>
-            <ul className="nav_list">
+            <ul className={isActive ? 'active' : 'nav_list'}>
               <li>
                 <a href="#">Collections</a>
               </li>

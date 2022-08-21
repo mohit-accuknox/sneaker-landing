@@ -66,8 +66,33 @@ a:hover{
         cursor: pointer;
     }
 
+    .nav_items{
+        position: relative;
+    }
+
     ul{
-        display: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        width: 40%;
+        left: -1000px;
+        top: 7.7rem;
+        padding: 1rem;
+        z-index: 2;
+        height: 50vh;
+        background-color: gray;
+        transition: all .5s ease;
+        
+    }
+
+    .active{
+        left: 0;
+    }
+
+    ul li a{
+        color: white;
     }
 
     .avatar-logo{
@@ -90,6 +115,14 @@ a:hover{
 }
 
 @media screen and (max-width: 500px){
+    ul{
+        width: 100%;
+        top: 6.3rem;
+    }
+
+    ul li a{
+        font-size: 1.8rem;
+    }
     .nav_items{
         padding: 1rem;
     }
